@@ -37,7 +37,7 @@ public class PlantumlTaglet implements Taglet {
 
 This generates javadoc for class PlantumlTaglet.
 
-javadoc -taglet org.taglet.plantuml.PlantumlTaglet -tagletpath /Users/m.vanleunen/git/plantumltaglet/target/plantumltaglet-1.0-SNAPSHOT-jar-with-dependencies.jar  /Users/m.vanleunen/git/plantumltaglet/src/main/java/org/taglet/plantuml/PlantumlTaglet.java
+javadoc -taglet org.taglet.plantuml.PlantumlTaglet -tagletpath /Users/user/git/plantumltaglet/target/plantumltaglet-1.0-SNAPSHOT-jar-with-dependencies.jar  /Users/user/git/plantumltaglet/src/main/java/org/taglet/plantuml/PlantumlTaglet.java
 
 ## With maven integration 
 
