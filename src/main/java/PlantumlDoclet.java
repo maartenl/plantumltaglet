@@ -1,5 +1,3 @@
-package org.example;
-
 import jdk.javadoc.doclet.StandardDoclet;
 
 /**
@@ -7,5 +5,8 @@ import jdk.javadoc.doclet.StandardDoclet;
  *
  */
 public class PlantumlDoclet extends StandardDoclet {
-
+  @Override
+  public String getName() {
+    return "PlantumlDoclet";
+  }
 }

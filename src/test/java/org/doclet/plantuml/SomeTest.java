@@ -1,9 +1,9 @@
-package org.example;
+package org.doclet.plantuml;
 
 /**
  * Unit test for simple App.
  */
-public class PlantumlDocletTest {
+public class SomeTest {
 
   /**
    * Rigourous Test :-)
