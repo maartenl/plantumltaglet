@@ -2,7 +2,38 @@
 
 A taglet @plantuml that generated in-place images (png). in the html javadoc files.
 
-= For example: =
+= Javadoc example =
+
+== Example 1 ==
+
+/**
+ * Created PlantUML Diagrams based on a plantuml description.
+ * @plantuml
+ * PlantumlImageDataFactory : +getImageData(plantuml: String): String
+ */
+public class PlantumlImageDataFactory {
+
+== Example 2 ==
+
+/**
+ * A Taglet made by me to convert appropriate Plantuml codes into generated diagrams. Uses layout smetana instead
+ * of GraphViz.
+ * @plantuml
+ * <!--
+ * interface Taglet
+ * class PlantumlTaglet
+ * Taglet <|.. PlantumlTaglet
+ * class Location
+ * Taglet : +getAllowedLocations(): Set<Location>
+ * Location o-left- Taglet
+ * PlantumlImageDataFactory o-left- PlantumlTaglet
+ * PlantumlImageDataFactory :  + {static} getImageData(plantuml: String): String
+ * -->
+ * @see <a href="https://mnlipp.github.io/jdrupes-taglets/plantuml-taglet/javadoc/index.html">PlantUML Taglet</a>
+ */
+public class PlantumlTaglet implements Taglet {
+
+= Creating javadoc example =
 
 This generates javadoc for class PlantumlTaglet.
 
@@ -32,3 +63,7 @@ Just add the custom taglet to your maven-javadoc-plugin in your pom.xml, like so
           </tagletArtifact>
         </configuration>
       </plugin>
+
+= Notes =
+
+Using <!-- and --> to circumvent javadoc barfing on strange characters in your @plantuml tag works fine.
