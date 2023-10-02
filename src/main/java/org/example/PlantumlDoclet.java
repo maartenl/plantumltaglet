@@ -7,4 +7,5 @@ import jdk.javadoc.doclet.StandardDoclet;
  *
  */
 public class PlantumlDoclet extends StandardDoclet {
+
 }
