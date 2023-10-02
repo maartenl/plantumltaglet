@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.Base64;
 import java.util.logging.Logger;
 
+/**
+ * Created PlantUML Diagrams based on a plantuml description.
+ */
 public class PlantumlImageDataFactory {
 
   private static final Logger LOGGER = Logger.getLogger(PlantumlImageDataFactory.class.getCanonicalName());
@@ -17,6 +20,11 @@ public class PlantumlImageDataFactory {
 
   }
 
+  /**
+   * Creates images data of a plant uml diagram.
+   * @param plantuml the plant uml description for generating the diagrma
+   * @return base64 encoded image data (png format).
+   */
   public static String getImageData(String plantuml) {
     final SourceStringReader sourceStringReader =
         new SourceStringReader(plantuml);
