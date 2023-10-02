@@ -1,4 +1,4 @@
-package org.doclet.plantuml;
+package org.taglet.plantuml;
 
 /**
  * Unit test for simple App.

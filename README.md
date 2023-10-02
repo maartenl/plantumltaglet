@@ -1,12 +1,11 @@
-# plantumldoclet
+# plantumltaglet
 
-A doclet that does the same as the standard doclet, but retrieves special tag "@plantuml" and generates diagrams
-with it, and refers to them in the html javadoc files.
+A taglet @plantuml that generated in-place images (png). in the html javadoc files.
 
 = For example: =
 
 This generates javadoc for itself.
 
-javadoc -doclet PlantumlDoclet -docletpath /Users/m.vanleunen/git/plantumldoclet/target/classes  /Users/m.vanleunen/git/plantumldoclet/src/main/java/PlantumlDoclet.java
+javadoc -taglet org.taglet.plantuml.PlantumlTaglet -tagletpath /Users/m.vanleunen/git/plantumltaglet/target/classes  /Users/m.vanleunen/git/plantumltaglet/src/main/java/PlantumlTaglet.java
 
-javadoc -taglet org.doclet.plantuml.PlantumlTag -tagletpath /Users/m.vanleunen/git/plantumldoclet/target/classes  /Users/m.vanleunen/git/plantumldoclet/src/main/java/PlantumlDoclet.java
+javadoc -taglet org.taglet.plantuml.PlantumlTaglet -tagletpath /Users/m.vanleunen/git/plantumltaglet/target/plantumltaglet-1.0-SNAPSHOT-jar-with-dependencies.jar  /Users/m.vanleunen/git/plantumltaglet/src/main/java/org/taglet/plantuml/PlantumlTaglet.java
