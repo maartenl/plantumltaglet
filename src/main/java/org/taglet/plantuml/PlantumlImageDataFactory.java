@@ -11,6 +11,8 @@ import java.util.logging.Logger;
 
 /**
  * Created PlantUML Diagrams based on a plantuml description.
+ * @plantuml
+ * PlantumlImageDataFactory : +getImageData(plantuml: String): String
  */
 public class PlantumlImageDataFactory {
 
