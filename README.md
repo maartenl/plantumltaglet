@@ -7,6 +7,6 @@ with it, and refers to them in the html javadoc files.
 
 This generates javadoc for itself.
 
-% javadoc -doclet PlantumlDoclet -docletpath ../../../target/classes  PlantumlDoclet.java
+javadoc -doclet PlantumlDoclet -docletpath /Users/m.vanleunen/git/plantumldoclet/target/classes  /Users/m.vanleunen/git/plantumldoclet/src/main/java/PlantumlDoclet.java
 
-
+javadoc -taglet org.doclet.plantuml.PlantumlTag -tagletpath /Users/m.vanleunen/git/plantumldoclet/target/classes  /Users/m.vanleunen/git/plantumldoclet/src/main/java/PlantumlDoclet.java
