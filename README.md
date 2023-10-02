@@ -1,20 +1,20 @@
 # plantumltaglet
+ 
+A taglet @plantuml that generated in-place diagram images (png) in the html javadoc files.
 
-A taglet @plantuml that generated in-place images (png). in the html javadoc files.
+## Javadoc example 
 
-= Javadoc example =
-
-== Example 1 ==
-
+### Example 1
+```
 /**
  * Created PlantUML Diagrams based on a plantuml description.
  * @plantuml
  * PlantumlImageDataFactory : +getImageData(plantuml: String): String
  */
 public class PlantumlImageDataFactory {
-
-== Example 2 ==
-
+```
+### Example 2 
+```
 /**
  * A Taglet made by me to convert appropriate Plantuml codes into generated diagrams. Uses layout smetana instead
  * of GraphViz.
@@ -32,14 +32,14 @@ public class PlantumlImageDataFactory {
  * @see <a href="https://mnlipp.github.io/jdrupes-taglets/plantuml-taglet/javadoc/index.html">PlantUML Taglet</a>
  */
 public class PlantumlTaglet implements Taglet {
-
-= Creating javadoc example =
+```
+## Creating javadoc example 
 
 This generates javadoc for class PlantumlTaglet.
 
 javadoc -taglet org.taglet.plantuml.PlantumlTaglet -tagletpath /Users/m.vanleunen/git/plantumltaglet/target/plantumltaglet-1.0-SNAPSHOT-jar-with-dependencies.jar  /Users/m.vanleunen/git/plantumltaglet/src/main/java/org/taglet/plantuml/PlantumlTaglet.java
 
-= With maven integration =
+## With maven integration 
 
 mvn javadoc:javadoc
 
@@ -49,6 +49,7 @@ Attention: it means you should have this artifact in your maven .m2/repository m
 the custom taglet.
 
 Just add the custom taglet to your maven-javadoc-plugin in your pom.xml, like so:
+```
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
@@ -63,7 +64,9 @@ Just add the custom taglet to your maven-javadoc-plugin in your pom.xml, like so
           </tagletArtifact>
         </configuration>
       </plugin>
+```
+## Notes 
 
-= Notes =
+Using <!-- and --> to circumvent javadoc barfing on strange characters in your @plantuml tag.
 
-Using <!-- and --> to circumvent javadoc barfing on strange characters in your @plantuml tag works fine.
+The plantuml graphics layout is "smetana", NOT "GraphViz". This package should work fine without installing GraphViz!
