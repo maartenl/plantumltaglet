@@ -55,14 +55,13 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.6.0</version>
         <configuration>
-          <taglet>org.taglet.plantuml</taglet>
+          <taglet>org.taglet.plantuml.PlantumlTaglet</taglet>
           <!-- <tagletpath>/path/to/taglet.jar</tagletpath> -->
-          <tagletpath>/Users/m.vanleunen/git/plantumltaglet/target/plantumltaglet-1.0-SNAPSHOT-jar-with-dependencies.jar</tagletpath>
-<!--          <tagletArtifact>-->
-<!--            <groupId>org.taglet.plantuml</groupId>-->
-<!--            <artifactId>plantumltaglet</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--          </tagletArtifact>-->
+          <tagletArtifact>
+            <groupId>org.taglet.plantuml</groupId>
+            <artifactId>plantumltaglet</artifactId>
+            <version>1.0-SNAPSHOT</version>
+          </tagletArtifact>
         </configuration>
       </plugin>
     </plugins>
