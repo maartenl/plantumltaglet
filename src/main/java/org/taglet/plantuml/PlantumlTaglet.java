@@ -13,9 +13,19 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
- * A Taglet made by me to convert appropriate Plantuml codes into generated diagrams.
- * @plantuml Alice -> Bob: test
- * Alice -> Bob: test2
+ * A Taglet made by me to convert appropriate Plantuml codes into generated diagrams. Uses layout smetana instead
+ * of GraphViz.
+ * @plantuml
+ * <!--
+ * interface Taglet
+ * class PlantumlTaglet
+ * Taglet <|.. PlantumlTaglet
+ * class Location
+ * Taglet : +getAllowedLocations(): Set<Location>
+ * Location o-left- Taglet
+ * PlantumlImageDataFactory o-left- PlantumlTaglet
+ * PlantumlImageDataFactory :  + {static} getImageData(plantuml: String): String
+ * -->
  * @see <a href="https://mnlipp.github.io/jdrupes-taglets/plantuml-taglet/javadoc/index.html">PlantUML Taglet</a>
  */
 public class PlantumlTaglet implements Taglet {
@@ -90,7 +100,10 @@ public class PlantumlTaglet implements Taglet {
       formatted = formatted.replace("<!--", "");
       formatted = replaceLast(formatted, "-->", "");
     }
-    String plantuml = "@startuml\n" + formatted + "\n@enduml\n";
+    String plantuml = "@startuml\n"
+        + "!pragma layout smetana\n"
+        + formatted
+        + "\n@enduml\n";
     LOGGER.fine(plantuml);
     return PlantumlImageDataFactory.getImageData(plantuml);
   }
