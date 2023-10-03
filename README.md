@@ -67,6 +67,6 @@ Just add the custom taglet to your maven-javadoc-plugin in your pom.xml, like so
 ```
 ## Notes 
 
-Using <!-- and --> to circumvent javadoc barfing on strange characters in your @plantuml tag.
+Using &lt;!-- and --&gt; to circumvent javadoc barfing on strange characters in your @plantuml tag.
 
 The plantuml graphics layout is "smetana", NOT "GraphViz". This package should work fine without installing GraphViz!
