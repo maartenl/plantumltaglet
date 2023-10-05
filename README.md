@@ -65,6 +65,10 @@ Just add the custom taglet to your maven-javadoc-plugin in your pom.xml, like so
         </configuration>
       </plugin>
 ```
+## What it will look like
+
+![Diagram Example](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7JMkM5dYXzE70azDOl-ErHfhotaLgXoi4UenldFzFGUP4faYgtqWuObCaB_Z9_9EbpDEk44mOXDRDeaInjFLzVE0VnCVzeX88HVUuULAN7CXsjrSjhF2qKV67lAqNwuqn_HQsR2HzoOUuipyO9FVAgUK6g7Q0XrBZ9DBbRhuo5OztodFmMkNwJvItaaGd/s880/Screenshot%202023-10-03%20at%2009.08.33.png)
+
 ## Notes 
 
 Using &lt;!-- and --&gt; to circumvent javadoc barfing on strange characters in your @plantuml tag.
