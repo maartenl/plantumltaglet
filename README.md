@@ -60,7 +60,7 @@ Just add the custom taglet to your maven-javadoc-plugin in your pom.xml, like so
           <tagletArtifact>
             <groupId>org.taglet.plantuml</groupId>
             <artifactId>plantumltaglet</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.1-SNAPSHOT</version>
           </tagletArtifact>
         </configuration>
       </plugin>
